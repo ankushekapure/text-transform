@@ -1,0 +1,141 @@
+.utility-container {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 1rem;
+}
+
+.heading-2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.btn, .clear-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0.4rem 0.6rem;
+    width: 30%;
+    height: 3rem;
+    background-color: #1c6f96;
+    color: #fff; /* White text color */
+}
+.clear-btn{
+    background-color: red ;
+}
+.clear-btn:hover{
+    background-color: rgb(194, 10, 10);
+}
+/* Styles for when a button is hovered */
+.btn:hover {
+    background-color: #084c6b; /* Darker blue on hover */
+}
+
+.btn-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.txt-area {
+    margin: 1.5rem 0.6rem;
+    border: 2px solid #e0e0e0; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333; /* Text color */
+    outline: none; /* Remove outline on focus */
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #666; /* Placeholder text color */
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.preview-container {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0.4rem 0.6rem;
+}
+
+.heading-3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.preview-container p {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid #e0e0e0; /* Light gray border */
+    padding: 0.5rem;
+}
+#words-count, #chara-count{
+    color: #74b6fd;
+}
+#txtPre {
+    width: 100%;
+    min-height: 15rem;
+    border: 1px solid #e0e0e0; /* Light gray border */
+    padding: 0.5rem;
+}
+
+
+/* Theme Selector Buttons */
+.themeSelector{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.themeSelector span#white{
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgb(77, 67, 67);
+  background-color: white;
+  margin: 0.4rem;
+}
+.themeSelector span#black{
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgb(77, 67, 67);
+  background-color: black;
+  margin: 0.4rem;
+}
+
+/* Dark Theme CSS */
+.darkTextArea {
+    background-color: #343a40;
+    color: white;
+}
+.darkBtnArea:hover {
+    background-color: #161718 !important;
+}
+.darkBtnArea {
+    background-color: #333;
+    color: #ffffff;
+}
+
+@media (max-width: 720px){
+    .btn, .clear-btn {
+        font-size: 0.8rem;
+        margin: 0.4rem 0.4rem;
+
+    }
+}
+@media (max-width: 440px){
+    .btn, .clear-btn {
+        font-size: 0.8rem;
+        margin: 0.3rem 0.2rem;
+        padding: 10px 2px;
+
+    }
+    .heading-2{
+        font-size: 1.5rem;
+    }
+    .heading-3{
+        font-size: 1.2rem;
+    }
+}

@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Alert from './components/Alert.jsx';
+import TextInput from './components/Textinput.jsx';
 
 function App() {
+  const [alert, setAlert] = useState(null);
+
+  const showAlert = (msg, type) => {
+    setAlert({ msg, type });
+    setTimeout(() => {
+      setAlert(null);
+    }, 3000); // Hide the alert after 3 seconds
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='container'>
+      <Alert alert={alert} />
+      <TextInput ShowAlert={showAlert} />
+    </main>
   );
 }
 
